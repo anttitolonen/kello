@@ -40,3 +40,21 @@ setInterval(() => {
 if (currentTimeElement) {
     currentTimeElement.textContent = getCurrentTime();
 }
+
+// Add button event listeners
+const hhmmButton = document.querySelectorAll('.settingsButton')[0];
+const hhmmssButton = document.querySelectorAll('.settingsButton')[1];
+
+hhmmButton?.addEventListener('click', () => {
+    appState.timeFormat = 'hh:mm';
+    if (currentTimeElement) {
+        currentTimeElement.textContent = getCurrentTime();
+    }
+});
+
+hhmmssButton?.addEventListener('click', () => {
+    appState.timeFormat = 'hh:mm:ss';
+    if (currentTimeElement) {
+        currentTimeElement.textContent = getCurrentTime();
+    }
+});

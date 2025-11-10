@@ -10,3 +10,35 @@ html, body { height: 100%; margin: 0; }
     font-size: 30vmin;
     font-family: 'Courier New', Courier, monospace;
 }
+
+#settingsPanel {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    transition: background-color 1s;
+}
+
+.settingsButton {
+    margin-left: 5px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid darkblue;
+    color: darkblue;
+    background-color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#settingsPanel:hover .settingsButton {
+    opacity: 1;
+}
+
+#settingsPanel:hover {
+    background-color: rosybrown;
+}
